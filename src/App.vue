@@ -1,32 +1,33 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <van-tabbar id="box">
+        <van-tabbar-item to="/" icon="like-o">猜你喜欢</van-tabbar-item>
+        <van-tabbar-item to="/sort" icon="search">分类</van-tabbar-item>
+        <van-tabbar-item to="/top" icon="orders-o">排行榜</van-tabbar-item>
+        <van-tabbar-item to="/cart" icon="shopping-cart-o">购物车</van-tabbar-item>
+        <van-tabbar-item to="/mytesco" icon="circle">我的易购</van-tabbar-item>
+      </van-tabbar>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html{
+  padding-bottom: 2rem;
+}
+#nav{
+  width: 100%;
+  // border: 2px solid black;
+  position:fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+ #box{
+    position:relative;
+    width: 15rem;
 }
 </style>
